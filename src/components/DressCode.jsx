@@ -19,13 +19,13 @@ export function DressCode() {
           src={dressCode.foto}
           alt={dressCode.fotoAlt}
           rotacion={1.5}
-          className="w-52 pb-3"
-          imgClassName="aspect-[3/4]"
+          className="w-64 pb-3"
+          imgClassName="aspect-[5/4]"
         />
       </div>
 
       {/* La paleta como muestrario: es más útil que describir los colores. */}
-      <ul className="mt-6 flex justify-center gap-4">
+      <ul className="mt-6 flex justify-center gap-3.5">
         {dressCode.paleta.map(({ nombre, hex }) => (
           <li key={hex} className="flex flex-col items-center gap-1.5">
             <span

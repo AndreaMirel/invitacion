@@ -7,10 +7,12 @@ compartirse por WhatsApp. React + Vite + Tailwind, publicada en GitHub Pages.
 
 ```bash
 npm install
-npm run dev      # http://127.0.0.1:5173/andrea-invitacion/
+npm run dev      # http://localhost:5173/Andrea_invitacion/
 npm run build    # genera dist/
 npm run preview  # sirve dist/ como se verá publicada
 ```
+
+La subruta `/Andrea_invitacion/` es obligatoria: sin ella verás una página en blanco.
 
 ## Cambiar el contenido
 
@@ -46,15 +48,13 @@ npx sharp-cli --input public/images/hero-noche.jpg --output public/og-image.jpg 
 
 ## Antes del primer deploy
 
-Tres cosas que dependen del nombre real del repositorio:
+El repositorio (`Andrea_invitacion`) y las URL absolutas del preview ya están
+configurados. Falta una sola cosa, y hay que hacerla a mano en GitHub:
 
-1. **`vite.config.js`** → la constante `REPO` debe coincidir con el nombre del
-   repositorio en GitHub.
-2. **`index.html`** → cambia `https://USUARIO.github.io/andrea-invitacion/` por la
-   URL real en `og:image` y `og:url`. WhatsApp exige URL absoluta para el preview.
-3. En GitHub: **Settings → Pages → Source: GitHub Actions**.
+**Settings → Pages → Source: GitHub Actions**
 
-Después, cada push a `main` publica.
+Después, cada push a `main` publica en
+`https://marcovargas0803.github.io/Andrea_invitacion/`.
 
 ### Si conectas un dominio propio
 

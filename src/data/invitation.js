@@ -16,7 +16,7 @@ export const invitation = {
   /* La fecha DEBE llevar el offset de zona horaria (-06:00 = centro de México).
      Sin él, cada teléfono la interpretaría en su propia zona y la cuenta
      regresiva marcaría algo distinto para cada invitada. */
-  fechaEvento: "2026-08-15T19:00:00-06:00",
+  fechaEvento: "2026-08-15T14:00:00-06:00",
   duracionHoras: 5,
   limiteRsvp: "2026-08-10T23:59:00-06:00",
 
@@ -43,7 +43,7 @@ export const invitation = {
     titulo: "good 4 u",
     artista: "Olivia Rodrigo × BTS",
     archivo: asset("audio/cancion.mp3"),
-    nota: "Súbele. Va a sonar toda la noche.",
+    nota: "Súbele. Va a sonar toda la fiesta.",
   },
 
   cuentaRegresiva: {
@@ -55,13 +55,14 @@ export const invitation = {
     seccion: "Código de vestimenta",
     titulo: "Olivia Rodrigo × K-Drama",
     descripcion:
-      "Negro de pies a cabeza, un detalle rojo y la actitud de la protagonista. Entre el pop-punk y el último capítulo.",
+      "Ven vestida/o como tu personaje favorito de K-drama o inspirado en Girl So in Love de Olivia Rodrigo.",
     foto: asset("images/dress-code.jpg"),
-    fotoAlt: "Referencia de vestuario: total black con luz cálida",
+    fotoAlt: "Collage de carteles de K-dramas como referencia de vestuario",
     paleta: [
+      { nombre: "Pastel", hex: "#E9C5D8" },
+      { nombre: "Neutro", hex: "#DFD3C6" },
+      { nombre: "Morado", hex: "#6B4B8A" },
       { nombre: "Negro", hex: "#1A1416" },
-      { nombre: "Cereza", hex: "#C6203A" },
-      { nombre: "Hueso", hex: "#F3E9E4" },
     ],
   },
 
@@ -89,9 +90,11 @@ export const invitation = {
   ubicacion: {
     seccion: "Dónde",
     nombre: "",
-    direccion: "",
+    direccion: "Nicolás Bravo 746, Centro, 91700 Veracruz, Ver.",
     referencia: "",
-    mapsUrl: "",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=" +
+      encodeURIComponent("Nicolás Bravo 746, Centro, 91700 Veracruz, Ver."),
   },
 
   rsvp: {
@@ -111,7 +114,7 @@ export const invitation = {
 
   despedida: {
     mensaje:
-      "Gracias por ser parte de mi historia. Hagamos que esta noche valga la pena contarla.",
+      "Gracias por ser parte de mi historia. Hagamos que este día valga la pena contarlo.",
     firma: "Te espero",
   },
 
