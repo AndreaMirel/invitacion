@@ -19,14 +19,6 @@ export function TopBar() {
           </span>
         </span>
 
-        <button
-          type="button"
-          onClick={compartir}
-          className="flex cursor-pointer items-center gap-1.5 rounded-full bg-vino px-3.5 py-1.5 font-sans text-[0.62rem] font-bold uppercase tracking-[0.12em] text-crema transition-colors hover:bg-cereza"
-        >
-          <Share2 size={13} />
-          Compartir
-        </button>
       </div>
 
       <AnimatePresence>

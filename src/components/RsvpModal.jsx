@@ -14,10 +14,11 @@ const campo =
 export function RsvpModal({ abierto, onCerrar }) {
   const [nombre, setNombre] = useState("");
   const [respuesta, setRespuesta] = useState(modal.opciones[0].valor);
-  const [acompanantes, setAcompanantes] = useState(0);
   const [nota, setNota] = useState("");
   const [errorNombre, setErrorNombre] = useState(null);
 
+  /* La invitación es personal: no se preguntan acompañantes. Solo se usa para
+     decidir si cae el confeti. */
   const asiste = respuesta === modal.opciones[0].valor;
 
   const enviar = (evento) => {
@@ -30,12 +31,7 @@ export function RsvpModal({ abierto, onCerrar }) {
     setErrorNombre(null);
 
     const elegida = modal.opciones.find((o) => o.valor === respuesta);
-    const mensaje = buildRsvpMessage({
-      nombre,
-      respuesta: elegida.mensaje,
-      acompanantes: asiste ? acompanantes : 0,
-      nota,
-    });
+    const mensaje = buildRsvpMessage({ nombre, respuesta: elegida.mensaje, nota });
 
     if (asiste) confetiConfirmacion();
     window.open(buildWhatsappUrl(invitation.whatsapp, mensaje), "_blank", "noopener");
@@ -112,27 +108,6 @@ export function RsvpModal({ abierto, onCerrar }) {
               ))}
             </div>
           </fieldset>
-
-          {asiste && (
-            <div>
-              <label
-                htmlFor="rsvp-acompanantes"
-                className="mb-1.5 block font-sans text-xs font-bold text-tinta/75"
-              >
-                ¿Con cuántas personas llegas?
-              </label>
-              <input
-                id="rsvp-acompanantes"
-                type="number"
-                min="0"
-                max="5"
-                inputMode="numeric"
-                value={acompanantes}
-                onChange={(e) => setAcompanantes(e.target.value)}
-                className={campo}
-              />
-            </div>
-          )}
 
           <div>
             <label htmlFor="rsvp-nota" className="mb-1.5 block font-sans text-xs font-bold text-tinta/75">

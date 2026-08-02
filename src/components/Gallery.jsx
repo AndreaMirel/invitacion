@@ -27,7 +27,6 @@ export function Gallery() {
               <Polaroid
                 src={f.src}
                 alt={f.alt}
-                pie={f.pie}
                 rotacion={f.rotacion}
                 imgClassName="aspect-square"
               />
@@ -36,6 +35,7 @@ export function Gallery() {
         ))}
       </ul>
 
+    
       <p className="mt-5 text-center font-hand text-lg text-tinta/50">{galeria.nota}</p>
 
       <Modal
@@ -61,7 +61,6 @@ export function Gallery() {
               className="w-full rounded-lg border-4 border-crema object-contain"
             />
             <figcaption className="mt-3 text-center font-hand text-xl text-crema">
-              {foto.pie}
             </figcaption>
           </figure>
         )}

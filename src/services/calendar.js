@@ -89,7 +89,7 @@ export function fechaCorta(fecha, zona = ZONA) {
   }).format(fecha);
 }
 
-/** "7:00 p.m." */
+/** "3:00 p.m." */
 export function hora(fecha, zona = ZONA) {
   return new Intl.DateTimeFormat("es-MX", {
     timeZone: zona,

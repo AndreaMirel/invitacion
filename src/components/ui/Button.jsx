@@ -1,7 +1,7 @@
 const VARIANTES = {
   /* Acción principal: una sola por pantalla. */
   solida:
-    "bg-cereza text-crema shadow-[0_8px_20px_-8px_rgba(198,32,58,0.7)] hover:bg-vino active:scale-[0.98]",
+    "bg-cereza text-crema shadow-[0_8px_20px_-8px_rgba(209,54,114,0.55)] hover:bg-vino active:scale-[0.98]",
   /* Acciones secundarias: papel recortado sobre papel. */
   contorno:
     "bg-crema text-vino border-2 border-dashed border-cereza/50 hover:border-cereza hover:bg-blush active:scale-[0.98]",

@@ -1,7 +1,7 @@
 import confetti from "canvas-confetti";
 
 /** Confeti en la paleta de la invitación, no en el arcoíris por defecto. */
-const COLORES = ["#C6203A", "#6E0F2A", "#E9B6C0", "#F7DDE2", "#FBF7F4"];
+const COLORES = ["#D13672", "#8A2A52", "#F8A5C2", "#FDE2E4", "#FFF5F7"];
 
 const sinMovimiento = () =>
   typeof window !== "undefined" &&

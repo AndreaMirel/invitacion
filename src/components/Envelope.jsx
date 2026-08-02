@@ -45,34 +45,42 @@ export function Envelope() {
         className="group mx-auto mt-9 block w-full max-w-[19rem] cursor-pointer rounded-xl"
         style={{ perspective: "1100px" }}
       >
-        <div className="relative mx-auto h-48 w-full">
-          {/* Cuerpo del sobre */}
-          <div className="grano absolute inset-0 rounded-lg bg-vino shadow-[0_16px_34px_-14px_rgba(26,20,22,0.75)]" />
+        {/* Las capas van de atrás hacia adelante como en un sobre de verdad:
+            forro, carta, bolsillo, solapa, sello. La carta arranca justo en la
+            punta de la solapa para que ninguna la tape, y asoma por encima del
+            bolsillo lo suficiente para leer el título y la fecha. */}
+        <div className="relative mx-auto h-56 w-full">
+          {/* Forro del sobre */}
+          <div className="grano absolute inset-0 rounded-lg bg-vino shadow-[0_16px_34px_-14px_rgba(58,46,57,0.75)]" />
 
-          {/* Carta: sube y se asoma al abrir */}
+          {/* Carta: sale del bolsillo al abrir */}
           <motion.div
-            className="absolute inset-x-4 top-4 z-10 flex h-[10.5rem] flex-col items-center justify-center rounded-sm bg-crema px-5 text-center shadow-[0_6px_16px_-8px_rgba(26,20,22,0.5)]"
-            animate={abierto ? { y: -74 } : { y: 0 }}
+            className="absolute inset-x-4 top-[42%] z-10 flex h-[7.5rem] flex-col items-center rounded-sm bg-crema px-5 pt-3 text-center shadow-[0_6px_16px_-8px_rgba(58,46,57,0.5)]"
+            animate={abierto ? { y: -96 } : { y: 0 }}
             transition={{ duration: 0.7, delay: abierto ? 0.35 : 0, ease: [0.22, 0.61, 0.36, 1] }}
           >
-            <Bow className="mb-1.5 text-cereza" size={22} />
             <p className="font-serif text-lg leading-tight text-vino">{sobre.titulo}</p>
             <div className="my-2 h-px w-10 bg-rosa" />
-            <p className="font-sans text-[0.62rem] font-medium uppercase tracking-[0.18em] text-tinta/65">
+            <p className="font-sans text-[0.6rem] font-medium uppercase tracking-[0.18em] text-tinta/65">
               {fechaLarga(fecha)}
             </p>
           </motion.div>
 
+          {/* Bolsillo frontal: es lo que hace que la carta se vea metida dentro */}
+          <div className="absolute inset-x-0 bottom-0 top-[72%] z-20 rounded-b-lg border-t border-crema/15 bg-vino shadow-[0_-8px_14px_-8px_rgba(58,46,57,0.65)]">
+            <Bow className="mx-auto mt-3 block text-rosa" size={20} />
+          </div>
+
           {/* Solapa */}
           <motion.div
-            className="absolute inset-x-0 top-0 h-1/2 origin-top rounded-t-lg bg-cereza"
+            className="absolute inset-x-0 top-0 h-[42%] origin-top rounded-t-lg bg-cereza"
             style={{ clipPath: "polygon(0 0, 50% 100%, 100% 0)", transformStyle: "preserve-3d" }}
-            animate={abierto ? { rotateX: 180, zIndex: 5 } : { rotateX: 0, zIndex: 20 }}
+            animate={abierto ? { rotateX: 180, zIndex: 5 } : { rotateX: 0, zIndex: 30 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
           />
 
           {/* Sello de lacre */}
-          <div className="absolute -bottom-3 right-7 z-30 flex h-12 w-12 rotate-12 items-center justify-center rounded-full border-2 border-crema bg-cereza font-display text-2xl text-crema shadow-lg">
+          <div className="absolute -bottom-3 right-7 z-40 flex h-12 w-12 rotate-12 items-center justify-center rounded-full border-2 border-crema bg-cereza font-display text-2xl text-crema shadow-lg">
             {sobre.sello}
           </div>
         </div>

@@ -14,13 +14,9 @@ export function normalizarTelefono(telefono) {
 /**
  * Arma el mensaje de confirmación. WhatsApp interpreta *texto* como negritas.
  */
-export function buildRsvpMessage({ nombre, respuesta, acompanantes = 0, nota = "" }) {
+export function buildRsvpMessage({ nombre, respuesta, nota = "" }) {
   const lineas = [`Hola, soy *${nombre.trim()}*.`, respuesta];
 
-  if (Number(acompanantes) > 0) {
-    const n = Number(acompanantes);
-    lineas.push(`Voy con ${n} ${n === 1 ? "acompañante" : "acompañantes"}.`);
-  }
   if (nota.trim()) lineas.push(nota.trim());
 
   return lineas.join("\n");

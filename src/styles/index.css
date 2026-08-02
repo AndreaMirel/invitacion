@@ -12,14 +12,17 @@
 @import "@fontsource/sacramento/400.css";
 
 @theme {
-  /* --- Coquette Noir ---------------------------------------------------- */
-  --color-crema: #fbf7f4; /* fondo de página */
-  --color-hueso: #f3e9e4; /* superficies, tarjetas */
-  --color-blush: #f7dde2; /* fondos de sección alternos */
-  --color-rosa: #e9b6c0; /* bordes y decoración — nunca texto */
-  --color-cereza: #c6203a; /* acento fuerte: moños, CTA */
-  --color-vino: #6e0f2a; /* titulares */
-  --color-tinta: #1a1416; /* texto base */
+  /* --- Coquette Rosa -----------------------------------------------------
+     Los hex vienen de la paleta de la invitación anterior (legacy/index.html).
+     `cereza` toma coquette-600 y no el 500 (#e75480) porque también se usa como
+     texto pequeño y como fondo de botón: el 500 se queda en 3.6:1 y falla AA. */
+  --color-crema: #fff5f7; /* fondo de página */
+  --color-hueso: #fff0f5; /* superficies, tarjetas */
+  --color-blush: #fde2e4; /* fondos de sección alternos */
+  --color-rosa: #f8a5c2; /* bordes y decoración — nunca texto */
+  --color-cereza: #d13672; /* acento fuerte: moños, CTA */
+  --color-vino: #8a2a52; /* titulares */
+  --color-tinta: #3a2e39; /* texto base */
 
   /* --- Tipografía -------------------------------------------------------
      display  Sacramento          solo el nombre y el 21
