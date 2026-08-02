@@ -16,7 +16,7 @@ export const invitation = {
   /* La fecha DEBE llevar el offset de zona horaria (-06:00 = centro de México).
      Sin él, cada teléfono la interpretaría en su propia zona y la cuenta
      regresiva marcaría algo distinto para cada invitada. */
-  fechaEvento: "2026-08-15T15:00:00-06:00",
+  fechaEvento: "2026-08-15T14:00:00-06:00",
   duracionHoras: 5,
   limiteRsvp: "2026-08-10T23:59:00-06:00",
 
@@ -24,15 +24,15 @@ export const invitation = {
   whatsapp: "522297813356",
 
   sobre: {
-    eyebrow: "Fiesta de cumpleaños",
-    intro: "Estás invitada a mi",
+    eyebrow: "Te invito a mi...",
+    intro: "Hola!",
     titulo: "convivio de cumpleaños",
     sello: "21",
     pista: "Toca el sobre para abrirlo",
   },
 
   hero: {
-    encabezado: "Estás invitada a",
+    encabezado: "Ven y celebra conmigo...",
     subtitulo: "Mis veintiuno",
     foto: asset("images/hero-noche.jpg"),
     fotoAlt: "Andrea de noche en la calle, abrazada con sus invitados de honor",
