@@ -90,11 +90,11 @@ export const invitation = {
   ubicacion: {
     seccion: "Dónde",
     nombre: "",
-    direccion: "Nicolás Bravo 747, Centro, 91700 Veracruz, Ver.",
+    direccion: "Nicolás Bravo 753, Centro, 91700 Veracruz, Ver.",
     referencia: "",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=" +
-      encodeURIComponent("Nicolás Bravo 747, Centro, 91700 Veracruz, Ver."),
+      encodeURIComponent("Nicolás Bravo 753, Centro, 91700 Veracruz, Ver."),
   },
 
   rsvp: {
