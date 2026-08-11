@@ -99,7 +99,7 @@ export const invitation = {
 
   rsvp: {
     seccion: "Confirmación de asistencia",
-    instruccion: "Confírmame antes del {fecha} para apartarte lugar.",
+    instruccion: "Confírmame de preferencia hoy para apartarte lugar.",
     boton: "Confirmar asistencia",
     modal: {
       titulo: "Confirmar asistencia",
