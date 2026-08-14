@@ -1,5 +1,6 @@
 import { MapPin, Navigation } from "lucide-react";
 import { invitation } from "../data/invitation";
+import { WashiTape } from "./ui/Polaroid";
 import { Button } from "./ui/Button";
 import { Polaroid } from "./ui/Polaroid";
 import { Section, SectionTitle } from "./ui/Section";
