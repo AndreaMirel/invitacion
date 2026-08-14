@@ -92,6 +92,8 @@ export const invitation = {
     nombre: "",
     direccion: "Nicolás Bravo 753, Centro, 91700 Veracruz, Ver.",
     referencia: "",
+    foto: asset("images/foto_casa.png"),
+    fotoAlt: "Imagen de la ubicación de la fiesta",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent("Nicolás Bravo 753, Centro, 91700 Veracruz, Ver."),
