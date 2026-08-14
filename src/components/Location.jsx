@@ -28,7 +28,7 @@ export function Location() {
         />
       </div>
 
-      <MapPin className="mx-auto text-cereza" size={22} strokeWidth={1.6} />
+      <MapPin className="mx-auto mt-6 text-cereza" size={22} strokeWidth={1.6} />
 
       {ubicacion.nombre && (
         <h3 className="mt-2 font-serif text-2xl font-medium text-vino">{ubicacion.nombre}</h3>
