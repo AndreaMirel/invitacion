@@ -1,6 +1,7 @@
 import { MapPin, Navigation } from "lucide-react";
 import { invitation } from "../data/invitation";
 import { Button } from "./ui/Button";
+import { Polaroid } from "./ui/Polaroid";
 import { Section, SectionTitle } from "./ui/Section";
 
 const { ubicacion } = invitation;
@@ -15,6 +16,17 @@ export function Location() {
   return (
     <Section id="donde" className="text-center">
       <SectionTitle>{ubicacion.seccion}</SectionTitle>
+
+      <div className="relative mx-auto mt-7 w-fit">
+        <WashiTape className="-top-3 left-1/2 h-5 w-20 -translate-x-1/2 rotate-2" />
+        <Polaroid
+          src={ubicacion.foto}
+          alt={ubicacion.fotoAlt}
+          rotacion={1.5}
+          className="w-64 pb-3"
+          imgClassName="aspect-[5/4]"
+        />
+      </div>
 
       <MapPin className="mx-auto text-cereza" size={22} strokeWidth={1.6} />
 
